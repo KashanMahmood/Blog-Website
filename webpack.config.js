@@ -9,13 +9,14 @@ const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { 
 const autoprefixer = require('autoprefixer');
 const postcssPresets = require('postcss-preset-env');
 
-
 module.exports = {
   mode: env,
+  output: { publicPath: '/' },
   entry: ['./src'], // this is where our app lives
   devtool: 'source-map', // this enables debugging with source in chrome devtools
   devServer: {
     hot: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -28,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
-          type: 'asset/resource',
+        type: 'asset/resource',
         generator: {
           filename: 'assets/[name].[contenthash][ext][query]',
         },
@@ -62,7 +63,7 @@ module.exports = {
               sourceMap: true,
             },
           },
-          
+
         ],
       },
     ],
