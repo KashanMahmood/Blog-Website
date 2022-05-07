@@ -7,7 +7,7 @@ function NewPost(props) {
   const [tags, setTags] = useState('');
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [coverUrl, setCoverUrl] = useState('newPost.jpeg');
+  const [coverUrl, setCoverUrl] = useState('');
 
   const handleTitle = (event) => {
     setTitle(event.target.value);
@@ -40,7 +40,7 @@ function NewPost(props) {
       <input className="tagsInput addPostComponent" placeholder="Tags" onChange={handleTags} />
       <input className="contentInput addPostComponent" placeholder="Type post content here" onChange={handleContent} />
       <input className="coverUrlInput addPostComponent" placeholder="Cover Url" onChange={handleCoverURL} />
-      <button type="button" className="createBttn " onClick={handleCreate}>CREATE</button>
+      <button type="button" className="createBttn" onClick={handleCreate}>CREATE</button>
     </div>
 
   );
