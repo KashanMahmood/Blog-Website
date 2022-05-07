@@ -75,7 +75,7 @@ function Post(props) {
         <TextareaAutosize
           onChange={handleTitleEdit}
           value={title}
-          className="titleTextBox"
+          className="titleTextBox textArea"
           maxRows={2}
           cacheMeasurements
 
@@ -93,7 +93,7 @@ function Post(props) {
         <TextareaAutosize
           onChange={handleContentEdit}
           value={content}
-          className="contentTextBox"
+          className="contentTextBox textArea"
           maxRows={2}
           cacheMeasurements
 
@@ -111,7 +111,7 @@ function Post(props) {
         <TextareaAutosize
           onChange={handleTagsEdit}
           value={tags}
-          className="contentTagsBox"
+          className="contentTagsBox textArea"
           maxRows={2}
           cacheMeasurements
 
@@ -126,26 +126,29 @@ function Post(props) {
 
   return (
     <div>
-      <div className="post">
+      <div className="postContainer">
+        <div className="post">
 
-        <div className="title">
-          <element onClick={handleTitleClick}>{renderTitleSection()}</element>
-        </div>
-        <div className="tags">
-          <element onClick={handleTagsClick}>{renderTagsSection()}</element>
-        </div>
-        <div className="content">
-          <element onClick={handleContentClick}>{renderContentSection()}</element>
-        </div>
+          <div className="title postPart">
+            <element onClick={handleTitleClick}>{renderTitleSection()}</element>
+          </div>
+          <div className="tags postPart">
+            <div>Tags:</div>
+            <element onClick={handleTagsClick}>{renderTagsSection()}</element>
+          </div>
+          <div className="content postPart">
+            <element onClick={handleContentClick}>{renderContentSection()}</element>
+          </div>
 
-        <div className="footer">
-          { (titleEditing || contentEditing || tagsEditing)
-            && <i role="button" id="editBttn" tabIndex={0} aria-label="edit" onClick={handleSaveClick} className="fa-solid fa-square-check fa-xl" />}
-          <i role="button" id="deleteBttn" tabIndex={0} aria-label="delete" onClick={handleDeleteClick} className="fa-solid fa-trash-can fa-xl" />
+          <div className="footer postPart">
+            { (titleEditing || contentEditing || tagsEditing)
+            && <i role="button" id="editBttn" tabIndex={0} styler aria-label="edit" onClick={handleSaveClick} className="fa-solid fa-square-check fa-xl" />}
+            <i role="button" id="deleteBttn" tabIndex={0} aria-label="delete" onClick={handleDeleteClick} className="fa-solid fa-trash-can fa-xl" />
+          </div>
+
         </div>
 
       </div>
-
     </div>
   );
 }

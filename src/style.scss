@@ -19,7 +19,7 @@ body, html {
   height: 200px;
   max-width: 250px;
   max-height: 500px;
-  background-color: #edd0d5;
+  background: linear-gradient(to bottom, #629fe1 10%,#2f7dd1 50%, #1d6abd 100%);
   height: auto;
   border-radius: 10px;
   border: none;
@@ -33,7 +33,153 @@ body, html {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: large;
+  color:white;
+}
+.coverTags{
+  color:white;
+}
+.navLinks{
+  display: flex;
+  list-style:none;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+.hehe{
+  color:black;
 }
 
+.viewPost{
+  display: flex;
+  justify-content: flex-end;
+}
+
+//ADD POST
+
+.addPost{
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.addPostComponent{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  align-self: center;
+  background-color: none;
+  box-shadow: 0px 1px 0px 0 rgb(247, 248, 249), 0px 0px 7px 1px rgb(226, 232, 247);
+  border:none
+}
+
+.addPostComponent:hover{
+  box-shadow: 0px 1px 0px 0 rgb(247, 240, 114), 0px 0px 7px 1px rgb(255, 251, 177);
+}
+.addPostComponent:focus{
+  box-shadow: 0px 1px 0px 0 rgb(255, 142, 229), 0px 0px 7px 1px rgb(250, 176, 217);
+  border:none;
+}
+
+.createBttn{
+  margin: 15px;
+  width: 100px;
+  height: 35px;
+  align-self:center;
+}
+
+.contentInput{
+  height: 150px ;  
+}
   
+.createBttn{
+  margin: 15px;
+  width: 100px;
+  height: 35px;
+  align-self:center;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.createBttn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+//Single Post view
+.postContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10%;
+}
+.post{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  border-radius: 10px;
+  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(253, 254, 254, 0.19);
+  background: linear-gradient(to bottom, #629fe1 10%,#2f7dd1 50%, #1d6abd 100%);
+}
+
+.postPart{
+  display: flex;
+  align-self: center;
+  width: 75%;
+  padding: 10px;
+  margin: 15px;
+}
   
+.title{
+  font-weight: bold;
+  color:white;
+}
+.tags{
+  font-weight:lighter;
+  color:white;
+}
+.content{
+  color:white;
+}
+
+.footer{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+#deleteBttn{
+  cursor:pointer;
+  padding:10px;
+  margin: 10px;
+  color:white;
+  transform: scale(1.05);
+}
+#editBttn{
+  cursor:pointer;
+  padding:10px;
+  margin: 10px;
+  align-self: center;
+  color:white;
+}
+
+.textArea{
+  background-color: #629fe1 ;
+  height: auto;
+  width: 100%;
+}
+
+a, a:visited, a:active {
+  color: white;
+}
+
+a:hover{
+  transform: scale(1.05);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

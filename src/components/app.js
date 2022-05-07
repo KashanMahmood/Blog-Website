@@ -27,9 +27,9 @@ function App(props) {
 function Nav(props) {
   return (
     <nav>
-      <ul>
-        <li><NavLink exact to="/">Home</NavLink></li>
-        <li><NavLink to="/posts/new">New Post</NavLink></li>
+      <ul className="navLinks">
+        <li><NavLink exact to="/"><i className="fa-solid fa-house fa-2xl" /></NavLink></li>
+        <li><NavLink to="/posts/new"><i className="fa-solid fa-square-plus fa-2xl" /></NavLink></li>
       </ul>
     </nav>
   );
