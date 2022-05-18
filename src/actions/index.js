@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const ROOT_URL = 'https://platform.cs52.me/api';
+const ROOT_URL = 'https://platform-rest-api-kashanm.onrender.com/api';
 const API_KEY = '?key=k_mahmood';
 
 export const ActionTypes = {
@@ -60,7 +60,6 @@ export function deletePost(postID, navigate) {
 }
 
 export function updatePost(postID, updateContent) {
-  console.log(updateContent);
   return (dispatch) => {
     axios.put(`${ROOT_URL}/posts/${postID}${API_KEY}`, updateContent)
       .then((response) => {

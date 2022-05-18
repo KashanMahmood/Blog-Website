@@ -9,7 +9,9 @@ class Posts extends Component {
   }
 
   makePosts = () => {
+    console.log(this.props.all);
     const posts = Object.keys(this.props.all).map((id) => {
+      console.log(id);
       return (
 
         <PostCard key={this.props.all[id].id.toString()}
