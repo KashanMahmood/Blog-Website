@@ -34,7 +34,6 @@ function Post(props) {
     if (titleEditing) {
       setTitleEditing(false);
       props.updatePost(postID, { title });
-      console.log(props.post.title);
     }
     if (contentEditing) {
       setContentEditing(false);
@@ -47,8 +46,8 @@ function Post(props) {
   };
 
   const handleTitleClick = () => {
-    setTitleEditing(true);
     setTitle(props.post.title);
+    setTitleEditing(true);
   };
   const handleContentClick = () => {
     setContent(props.post.content);
@@ -121,7 +120,7 @@ function Post(props) {
     } else if (props.post.tags) {
       return (<div>{props.post.tags}</div>);
     } else {
-      return (<div><em>No tags</em></div>);
+      return (<div><em> No tags</em></div>);
     }
   };
 
