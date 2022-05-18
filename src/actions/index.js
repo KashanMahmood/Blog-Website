@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const ROOT_URL = 'https://platform-rest-api-kashanm.onrender.com/api';
+// const ROOT_URL = 'https://platform-rest-api-kashanm.onrender.com/api';
+const ROOT_URL = 'http://localhost:9090/api';
 const API_KEY = '?key=k_mahmood';
 
 export const ActionTypes = {
@@ -40,7 +41,9 @@ export function fetchPost(postID) {
   return (dispatch) => {
     axios.get(`${ROOT_URL}/posts/${postID}${API_KEY}`)
       .then((response) => {
+        console.log(response.data);
         dispatch({ type: ActionTypes.FETCH_POST, payload: response.data });
+        console.log(response.data);
       }).catch((error) => {
         console.log(error);
       });
