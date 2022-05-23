@@ -1,11 +1,23 @@
 import React from 'react';
 import '../style.scss';
 import {
-  BrowserRouter, Routes, Route, NavLink,
+  BrowserRouter, Routes, Route,
 } from 'react-router-dom';
 import Post from './post';
 import Posts from './posts';
 import NewPost from './newPost';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
+import RequireAuth from './requireAuth';
+import NavBar from './navBar';
+
+function Nav(props) {
+  return (
+    <nav>
+      <NavBar />
+    </nav>
+  );
+}
 
 function App(props) {
   return (
@@ -14,24 +26,15 @@ function App(props) {
         <Nav />
         <Routes>
           <Route path="/" element={<Posts />} />
-          <Route path="/posts/new" element={<NewPost />} />
+          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/posts/new" element={<RequireAuth> <NewPost /> </RequireAuth>} />
           <Route path="/posts/:postID" element={<Post />} />
           <Route render={() => (<div>post not found </div>)} />
         </Routes>
 
       </div>
     </BrowserRouter>
-  );
-}
-
-function Nav(props) {
-  return (
-    <nav>
-      <ul className="navLinks">
-        <li><NavLink exact to="/"><i className="fa-solid fa-house fa-2xl" /></NavLink></li>
-        <li><NavLink to="/posts/new"><i className="fa-solid fa-square-plus fa-2xl" /></NavLink></li>
-      </ul>
-    </nav>
   );
 }
 

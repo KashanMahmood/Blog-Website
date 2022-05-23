@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function PostCard(props) {
   const renderPostURL = () => {
-    if (props.coverUrl.trim().length < 1) {
+    if (!props.coverUrl || props.coverUrl.trim().length < 1) {
       return ('');
     }
     return (<img src={props.coverUrl} width="200" height="200" alt="" />);

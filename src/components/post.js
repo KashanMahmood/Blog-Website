@@ -139,6 +139,9 @@ function Post(props) {
           <div className="content postPart">
             <element onClick={handleContentClick}>{renderContentSection()}</element>
           </div>
+          <div className="author postPart">
+            <element> Author: {props.post.authName}</element>
+          </div>
 
           <div className="footer postPart">
             { (titleEditing || contentEditing || tagsEditing)
