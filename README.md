@@ -7,5 +7,4 @@ This is a blog post- like web app that allows you to post and view all apps.
 You are also able to expand the blog "card" and view the full post
 You are able to delete, edit, and create new posts
 
-![](https://imgur.com/a/nZyXmXf)
-
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/nZyXmXf" data-context="false" ><a href="//imgur.com/a/nZyXmXf"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
