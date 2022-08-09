@@ -1,4 +1,4 @@
-# Title
+# Blog Post
 https://radiant-granita-cd3a3a.netlify.app/
 
 This link does work. Do have to wait almost a minute for the posts to show up. This is due to inactivity on the API side. 
